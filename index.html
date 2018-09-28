@@ -8,26 +8,29 @@
   <link href="https://fonts.googleapis.com/css?family=Cutive|Raleway:400,600" rel="stylesheet"> 
   <link rel="stylesheet" href="dist/css/index.css">
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+  <script src="dist/firebase.js"></script>
 </head>
 <body>
   <header>
-    <div class="menu-container">
+    <div class="menu-container d-flex f-wrap j-between">
       <div class="menu-logo">
-        <a class="logo title-font" href="#">STORYLAB</a>
+        <a class="logo title-font" href="/">STORYLAB</a>
       </div>
       <nav>
         <ul class="menu-nav no-bullets">
-          <li><a href="#">login</a>
+          <li id="nav-login"><a href="" class="nav-login">login</a>
             <div class="login-container" id="login-container">
-              <div class="login-block">
-                <span>user:</span>
-                <input type="text">
-              </div>
-              <div class="login-block">
-                <span>password:</span>
-                <input type="password">
-              </div>
-              <button>Entrar</button>
+              <form class="login-block">
+                <input type="text" id="user-email" placeholder="E-mail">
+                <input type="password" id="password" placeholder="Senha">
+              </form>
+              <button id="login">Entrar</button>
+              <!-- <div>
+                <a href="#" id="recover-password">Esqueci a senha</a>
+              </div> -->
             </div>
           </li>
         </ul>
@@ -38,14 +41,14 @@
   <main class="main"></main>
 
   <footer>
-    <div class="contact" id="contact">
+    <div class="contact d-flex f-wrap j-between">
       <div class="mail">
         <h4>Contato</h4>
         <p>contato@storylab.com</p>
       </div>
       <div class="social-media">
         <h4>Redes Sociais</h4>
-        <ul>
+        <ul class="d-flex f-wrap j-between">
           <li>Instagram</li>
           <li>Facebook</li>
           <li>Twitter</li>
